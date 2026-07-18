@@ -1,0 +1,36 @@
+[package]
+name = "ekf"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "ekf"
+# To produce the static archive for C/C++ consumers, build with:
+# cargo rustc --release --no-default-features --features no_std,c_api --crate-type=staticlib
+crate-type = ["rlib"]
+
+[dependencies]
+map_3d = { git = "https://github.com/sahithyen/map_3d.git", version = "0.1.7", default-features = false }
+nalgebra = { version = "0.34.2", default-features = false }
+num-traits = { version = "0.2", default-features = false }
+pyo3 = { version = "0.28.3", features = ["extension-module"], optional = true }
+numpy = { version = "0.28.0", optional = true }
+heapless = "0.9.3"
+paste = "1.0.15"
+
+[features]
+default = ["std"]
+std = ["nalgebra/std", "map_3d/std"]
+no_std = ["nalgebra/libm", "map_3d/libm"]
+c_api = []
+c_api_sliding_window = ["c_api"]
+stats = []
+python = ["std", "stats", "dep:pyo3", "dep:numpy"]
+
+[dev-dependencies]
+csv = "1.4.0"
+serde = { version = "1.0.228", features = ["derive"] }
+tabled = "0.20.0"
+
+[build-dependencies]
+cbindgen = "0.29"

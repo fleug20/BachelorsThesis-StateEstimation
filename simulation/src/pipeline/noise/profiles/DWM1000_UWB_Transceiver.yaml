@@ -1,0 +1,9 @@
+name: DWM1000_UWB_Transceiver
+unit: m
+noise_density: 0.02            # 10 cm (at 50 Hz) -> 2 cm / sqrt(Hz)
+bias_fixed: 0                  # -
+random_walk: 0                 # -
+scale_factor_error: 0          # -
+range_min: 0                   # -
+range_max: 999                 # -
+resolution: ~                  # -

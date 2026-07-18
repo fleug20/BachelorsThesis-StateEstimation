@@ -1,0 +1,9 @@
+name: LSM6DSO32 Gyroscope
+unit: rad/s
+noise_density: 0.00006632      # 3.8 mdps/√Hz → 0.00006632 rad/s /√Hz
+bias_fixed: 0.00873            # 0.5 dps -> 0.00873 rad/s
+random_walk: 0.000349          # 0.02 dps -> 0.000349 rad/s -> assumption
+scale_factor_error: 0.005      # 0.5 %
+range_min: -34.9066            # ±2000 dps in rad/s
+range_max: 34.9066             # ±2000 dps in rad/s
+resolution: ~                  # ?

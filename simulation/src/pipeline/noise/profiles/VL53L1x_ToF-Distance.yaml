@@ -1,0 +1,9 @@
+name: VL53L1x_ToF-Distance
+unit: m
+noise_density: 0.00112         # 5mm (at 40 Hz) -> 0.00112 mm / sqrt(Hz)
+bias_fixed: 0.02               # 20 mm
+random_walk: 0                 # -
+scale_factor_error: 0          # -
+range_min: 0.04                # 40 mm
+range_max: 3.6                 # 3600 mm
+resolution: ~                  # -

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ekf"
+version = "0.1.0"
+description = "9-state MEKF in a local NED frame — Python bindings"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.23"]
+
+[tool.maturin]
+features = ["python"]
+module-name = "ekf"

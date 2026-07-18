@@ -1,0 +1,9 @@
+name: LSM303AGR eCompass Magnetometer
+unit: mgauss
+noise_density: 0.42            # 3 mgauss at 100 Hz -> 0.42 mgauss / sqrt(ODR/2)
+bias_fixed: 60                 # -
+random_walk: 6                 # -
+scale_factor_error: 0          # -
+range_min: 49152               # -
+range_max: 49152               # -
+resolution: ~                  # -

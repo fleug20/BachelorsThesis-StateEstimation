@@ -1,0 +1,9 @@
+name: MS5607 Barometer
+unit: Pa
+noise_density: 0.3            # 0.003 mbar / sqrt(Hz)
+bias_fixed: 200               # ±2 mbar
+random_walk: 20               # 0.2 mbar
+scale_factor_error: 0         # -
+range_min: 30000              # 300 mbar in Pa
+range_max: 110000             # 1200 mbar in Pa
+resolution: ~                 # -
